@@ -6,9 +6,10 @@ import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
+import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import XIcon from '@mui/icons-material/X';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import { Tooltip } from '@mui/material';
 
 const logoStyle = {
@@ -70,7 +71,7 @@ export default function Footer() {
                 >
                     <Tooltip title="GitHub">
                         <IconButton
-                            color="inherit"
+                            color="primary"
                             onClick={() => window.open('https://github.com/amankrs21', '_blank', 'noopener,noreferrer')}
                             aria-label="GitHub"
                             sx={{ alignSelf: 'center' }}
@@ -80,7 +81,7 @@ export default function Footer() {
                     </Tooltip>
                     <Tooltip title="Twitter">
                         <IconButton
-                            color="inherit"
+                            color="primary"
                             onClick={() => window.open('https://twitter.com/amankrs21', '_blank', 'noopener,noreferrer')}
                             aria-label="X"
                             sx={{ alignSelf: 'center' }}
@@ -90,12 +91,22 @@ export default function Footer() {
                     </Tooltip>
                     <Tooltip title="LinkedIn">
                         <IconButton
-                            color="inherit"
+                            color="primary"
                             onClick={() => window.open('https://www.linkedin.com/in/amankrs21', '_blank', 'noopener,noreferrer')}
                             aria-label="LinkedIn"
                             sx={{ alignSelf: 'center' }}
                         >
                             <LinkedInIcon />
+                        </IconButton>
+                    </Tooltip>
+                    <Tooltip title="Instagram">
+                        <IconButton
+                            color="primary"
+                            onClick={() => window.open('https://www.instagram.com/amankrs21', '_blank', 'noopener,noreferrer')}
+                            aria-label="LinkedIn"
+                            sx={{ alignSelf: 'center' }}
+                        >
+                            <InstagramIcon />
                         </IconButton>
                     </Tooltip>
                 </Stack>
