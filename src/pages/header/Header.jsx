@@ -2,16 +2,11 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { useNavigate } from 'react-router-dom';
 
-import Box from '@mui/material/Box';
-import AppBar from '@mui/material/AppBar';
-import Toolbar from '@mui/material/Toolbar';
-import Button from '@mui/material/Button';
-import Container from '@mui/material/Container';
-import Divider from '@mui/material/Divider';
-import Typography from '@mui/material/Typography';
-import MenuItem from '@mui/material/MenuItem';
-import Drawer from '@mui/material/Drawer';
+import {
+    Box, AppBar, Toolbar, Button, Container, Typography, MenuItem, Collapse,
+} from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
 
 const logoStyle = {
     width: '140px',
@@ -22,27 +17,16 @@ const logoStyle = {
 export default function Header({ mode }) {
     const navigate = useNavigate();
     const [open, setOpen] = useState(false);
-    const pages = ['Home', 'About Us', 'Contact'];
+    const pages = ['Home', 'About', 'Project', 'Resume'];
 
-    const toggleDrawer = (newOpen) => () => {
-        setOpen(newOpen);
+    const toggleDrawer = () => () => {
+        setOpen(!open);
     };
 
-
     const handlePage = (page) => {
-        if (page === 'Home') {
-            navigate('/');
-        } else if (page === 'About Us') {
-            navigate('/about');
-        } else if (page === 'Contact') {
-            navigate('/contact');
-        } else if (page === 'Todo') {
-            navigate('/todo');
-        } else if (page === 'Users') {
-            navigate('/users');
-        }
+        navigate('/' + (page === 'Home' ? '' : page.toLowerCase()));
         setOpen(false);
-    }
+    };
 
     return (
         <div>
@@ -78,67 +62,56 @@ export default function Header({ mode }) {
                                     : '0 0 1px rgba(2, 31, 59, 0.7), 1px 1.5px 2px -1px rgba(2, 31, 59, 0.65), 4px 4px 12px -2.5px rgba(2, 31, 59, 0.65)',
                         })}
                     >
+                        <img
+                            src={'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'}
+                            style={logoStyle}
+                            alt="logo"
+                        />
                         <Box
                             sx={{
                                 flexGrow: 1,
-                                display: 'flex',
-                                alignItems: 'center',
-                                ml: '-18px',
-                                px: 0,
+                                display: { xs: 'none', md: 'flex' },
+                                justifyContent: 'flex-end',
                             }}
                         >
-                            <img
-                                src={'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'}
-                                style={logoStyle}
-                                alt="logo of sitemark"
-                            />
-                            <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
-                                {pages.map((page) => (
-                                    <MenuItem key={page} sx={{ py: '6px', px: '12px' }} onClick={() => handlePage(page)}>
-                                        <Typography variant="body2" color="text.primary">
-                                            {page}
-                                        </Typography>
-                                    </MenuItem>
-                                ))}
-                            </Box>
+                            {pages.map((page) => (
+                                <MenuItem key={page} onClick={() => handlePage(page)}>
+                                    <Typography variant="body1" color="text.primary" fontWeight="bold">
+                                        {page}
+                                    </Typography>
+                                </MenuItem>
+                            ))}
                         </Box>
-                        <Box sx={{ display: { sm: '', md: 'none' } }}>
+                        <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                             <Button
                                 variant="text"
                                 color="primary"
                                 aria-label="menu"
-                                onClick={toggleDrawer(true)}
+                                onClick={toggleDrawer()}
                                 sx={{ minWidth: '30px', p: '4px' }}
                             >
-                                <MenuIcon />
+                                {!open ? <MenuIcon /> : <CloseIcon />}
                             </Button>
-                            <Drawer anchor="right" open={open} onClose={toggleDrawer(false)}>
-                                <Box
-                                    sx={{
-                                        minWidth: '60dvw',
-                                        p: 2,
-                                        backgroundColor: 'background.paper',
-                                        flexGrow: 1,
-                                    }}
-                                >
-                                    <Box
-                                        sx={{
-                                            display: 'flex',
-                                            flexDirection: 'column',
-                                            alignItems: 'end',
-                                            flexGrow: 1,
-                                        }}
-                                    >
-                                    </Box>
-                                    {pages.map((page) => (
-                                        <MenuItem key={page} onClick={() => handlePage(page)}>
-                                            {page}
-                                        </MenuItem>
-                                    ))}
-                                </Box>
-                            </Drawer>
                         </Box>
                     </Toolbar>
+                    <Collapse in={open}>
+                        <Box
+                            sx={{
+                                display: { xs: 'block', md: 'none' },
+                                bgcolor: mode === 'light' ? 'rgba(241, 241, 241, 0.9)' : 'rgba(0, 0, 0, 0.8)',
+                                backdropFilter: 'blur(10px)',
+                                borderRadius: '20px',
+                                textAlign: 'center',
+                                p: 2,
+                            }}
+                        >
+                            {pages.map((page) => (
+                                <MenuItem key={page} onClick={() => handlePage(page)} sx={{ justifyContent: 'center', width: '100%' }}>
+                                    <Typography textAlign="center" fontWeight="bold">{page}</Typography>
+                                </MenuItem>
+                            ))}
+                        </Box>
+                    </Collapse>
                 </Container>
             </AppBar>
         </div>

@@ -5,9 +5,15 @@ import { ThemeProvider, CssBaseline, createTheme } from "@mui/material";
 import getLPTheme from "./components/getLPTheme.jsx";
 import ToggleColorMode from "./components/ToggleColorMode.jsx";
 
-// import Home from './pages/home/Home'
-// import PageNotFound from './components/PageNotFound.jsx';
-// import AboutUs from './pages/about/AboutUs.jsx';
+import Home from './pages/home/Home.jsx';
+import About from './pages/about/About.jsx';
+import Header from './pages/header/Header.jsx';
+import Footer from './pages/footer/Footer.jsx';
+import Resume from './pages/resume/Resume.jsx';
+import Project from './pages/project/Project.jsx';
+import PageNotFound from './components/PageNotFound.jsx';
+
+
 
 export default function App() {
   const localMode = localStorage.getItem('mode');
@@ -30,13 +36,10 @@ export default function App() {
             <Route path="*" element={<Navigate to="/404" />} />
             <Route path='/' element={<Navigate to='/home' />} />
             <Route path="/home" element={<Home />} />
-            <Route path='/about' element={<AboutUs />} />
-            <Route path='/contact' element={<ContactUs />} />
+            <Route path='/about' element={<About />} />
+            <Route path='/project' element={<Project />} />
+            <Route path='/resume' element={<Resume />} />
             <Route path="/404" element={<PageNotFound />} />
-            <Route path="/" element={<PrivateRoutes />}>
-              <Route path='/todo' element={<Todos />} />
-              <Route path='/users' element={<Users />} />
-            </Route>
           </Routes>
         </div>
         <Footer />
