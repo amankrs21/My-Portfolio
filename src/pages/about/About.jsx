@@ -1,12 +1,15 @@
+import './About.css';
 import React from 'react'
 import {
     Container, Grid, Typography
 } from '@mui/material';
 import SkillSet from './SkillSet';
+import ToolsUse from './ToolsUse';
+import GitHubCalendar from "react-github-calendar";
 
 export default function About() {
     return (
-        <Container maxWidth='lg' sx={{ py: 1, backgroundImage: 'home-bg.jpg' }} id="home">
+        <Container maxWidth='lg' sx={{ py: 1 }} id="home">
             <Grid container my={1}>
                 <Grid item md={8} pl={2} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
                     <Typography variant="h3" textAlign='center'>
@@ -54,9 +57,28 @@ export default function About() {
                     <SkillSet />
                 </Grid>
             </Grid>
-
-            {/* <Grid sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            </Grid> */}
+            <Grid container justifyContent="center" mt={6}>
+                <Grid item xs={12} md={10}>
+                    <Typography variant="h3" align="center">
+                        <strong style={{ color: '#0a66c2' }}>TOOLS </strong> I USE
+                    </Typography>
+                    <ToolsUse />
+                </Grid>
+            </Grid>
+            <Grid container justifyContent="center" mt={5}>
+                <Grid item xs={12} md={12}>
+                    <Typography variant="h3" align="center">
+                        DAYS I <strong style={{ color: '#0a66c2' }}>CODE</strong>
+                    </Typography>
+                    <Grid container justifyContent="center" my={3}>
+                        <GitHubCalendar
+                            username="amankrs21"
+                            blockSize={15}
+                            blockMargin={5}
+                        />
+                    </Grid>
+                </Grid>
+            </Grid>
         </Container>
     );
 }
