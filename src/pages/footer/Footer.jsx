@@ -2,7 +2,6 @@ import React from 'react';
 import {
     Box, Container, IconButton, Link, Stack, Typography, Tooltip
 } from '@mui/material';
-
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
@@ -15,9 +14,8 @@ const logoStyle = {
 
 function Copyright() {
     return (
-        <Typography variant="h6" color="text.secondary">
-            {'Copyright © '}
-            <Link href="https://mui.com/">Sitemark&nbsp;</Link>
+        <Typography variant="subtitle2" component="h2" color="text.secondary">
+            {'Copyright © '}<strong style={{ color: '#0a66c2' }}>{"Aman's "}</strong>
             {new Date().getFullYear()}
         </Typography>
     );
