@@ -6,7 +6,7 @@ import {
 } from '@mui/material';
 import Typewriter from "typewriter-effect";
 import Lottie from 'react-lottie';
-import WorkDev from './work-main.json';
+import WorkDev from './work.json';
 // import Tilt from "react-parallax-tilt";
 
 export default function HomeSection() {

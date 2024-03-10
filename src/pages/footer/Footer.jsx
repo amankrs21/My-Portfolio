@@ -1,25 +1,21 @@
-import * as React from 'react';
-import Box from '@mui/material/Box';
-import Container from '@mui/material/Container';
-import IconButton from '@mui/material/IconButton';
-import Link from '@mui/material/Link';
-import Stack from '@mui/material/Stack';
-import Typography from '@mui/material/Typography';
+import React from 'react';
+import {
+    Box, Container, IconButton, Link, Stack, Typography, Tooltip
+} from '@mui/material';
 
 import XIcon from '@mui/icons-material/X';
 import FacebookIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { Tooltip } from '@mui/material';
 
 const logoStyle = {
-    width: '140px',
+    width: '150px',
     height: 'auto',
 };
 
 function Copyright() {
     return (
-        <Typography variant="body2" color="text.secondary" mt={1}>
+        <Typography variant="h6" color="text.secondary">
             {'Copyright © '}
             <Link href="https://mui.com/">Sitemark&nbsp;</Link>
             {new Date().getFullYear()}
@@ -29,44 +25,35 @@ function Copyright() {
 
 export default function Footer() {
     return (
-        <Container
-            sx={{
-                display: 'flex',
-                flexDirection: 'column',
-                alignItems: 'center',
-                gap: { xs: 4, sm: 8 },
-                py: { xs: 1, sm: 2 },
-                textAlign: { sm: 'center', md: 'left' },
-            }}
-        >
+        <Container maxWidth="lg">
             <Box
                 sx={{
                     display: 'flex',
+                    flexDirection: { xs: 'column', md: 'row' },
+                    alignItems: 'center',
                     justifyContent: 'space-between',
                     width: '100%',
                     borderTop: '1px solid',
                     borderColor: 'divider',
+                    pt: 1,
                 }}
             >
-                <div>
-                    <Box sx={{ ml: '-15px' }}>
-                        <img
-                            src={
-                                'https://assets-global.website-files.com/61ed56ae9da9fd7e0ef0a967/61f12e6faf73568658154dae_SitemarkDefault.svg'
-                            }
-                            style={logoStyle}
-                            alt="logo of sitemark"
-                        />
-                    </Box>
-                    <Copyright />
-                </div>
+                <Box
+                    component="img"
+                    src="Logo.png"
+                    sx={{
+                        ...logoStyle,
+                        mb: { xs: 0, md: 0 },
+                    }}
+                    alt="logo of sitemark"
+                />
                 <Stack
                     direction="row"
-                    justifyContent="left"
+                    justifyContent="center"
                     spacing={1}
-                    useFlexGap
                     sx={{
                         color: 'text.secondary',
+                        mb: { xs: 1, md: 0 }, // Add bottom margin only on xs devices
                     }}
                 >
                     <Tooltip title="GitHub">
@@ -110,6 +97,13 @@ export default function Footer() {
                         </IconButton>
                     </Tooltip>
                 </Stack>
+                <Box
+                    sx={{
+                        mb: { xs: 2, md: 0 },
+                    }}
+                >
+                    <Copyright />
+                </Box>
             </Box>
         </Container>
     );
