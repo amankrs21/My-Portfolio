@@ -7,7 +7,7 @@ import SkillSet from './SkillSet';
 import ToolsUse from './ToolsUse';
 import GitHubCalendar from "react-github-calendar";
 
-export default function About() {
+export default function About({ mode }) {
     return (
         <Container maxWidth='lg' sx={{ py: 1 }} id="home">
             <Grid container my={1}>
@@ -75,6 +75,7 @@ export default function About() {
                             username="amankrs21"
                             blockSize={15}
                             blockMargin={5}
+                            colorScheme={mode === 'light' ? 'light' : 'dark'}
                         />
                     </Grid>
                 </Grid>
