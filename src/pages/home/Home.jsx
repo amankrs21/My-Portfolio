@@ -1,7 +1,6 @@
 import './Home.css';
 import React from 'react';
 import {
-    Box,
     Container, Grid, Typography
 } from '@mui/material';
 import Typewriter from "typewriter-effect";
@@ -58,7 +57,7 @@ export default function HomeSection() {
                         width={400}
                     />
                     {/* <img
-                        src="home-dev.svg"
+                        src="home-work.svg"
                         alt="home pic"
                         className="img-fluid"
                         style={{ maxHeight: '450px', width: '100%' }}
@@ -74,8 +73,9 @@ export default function HomeSection() {
                         I totally got hooked on programming, and hey, I've picked up a
                         thing or two, I guess... 🤷
                         <br /><br />
-                        I am fluent in classics like
-                        <i><strong style={{ color: '#0a66c2' }}> Python, React and Dotnet. </strong></i>
+                        I excel in classics like
+                        <i><strong style={{ color: '#0a66c2' }}> Python 🐍, React ⚛️, and Dotnet 🖥️, </strong></i>
+                        always ready to innovate and simplify the digital world 🌎.
                         <br /><br />
                         My field of Interest's are building new &nbsp;
                         <i><strong style={{ color: '#0a66c2' }}>Web Technologies </strong></i>
