@@ -6,7 +6,6 @@ import {
 import Typewriter from "typewriter-effect";
 import Lottie from 'react-lottie';
 import WorkDev from './work.json';
-import Tilt from "react-parallax-tilt";
 
 export default function HomeSection() {
     const defaultOptions = {
@@ -83,9 +82,7 @@ export default function HomeSection() {
                     </Typography>
                 </Grid>
                 <Grid container item md={4} sx={{ justifyContent: 'center' }}>
-                    <Tilt>
-                        <img src="avatar.svg" alt="avatar" />
-                    </Tilt>
+                    <img src="avatar.svg" alt="avatar" />
                 </Grid>
             </Grid>
             {/* <Grid sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
