@@ -1,12 +1,15 @@
-import React, { useState } from 'react';
 import PropTypes from 'prop-types';
-import { useNavigate } from 'react-router-dom';
-
+import React, { useState } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 import {
     Box, AppBar, Toolbar, Button, Container, Typography, MenuItem, Collapse,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
+import PersonIcon from '@mui/icons-material/Person';
+import CottageIcon from '@mui/icons-material/Cottage';
+import DescriptionIcon from '@mui/icons-material/Description';
+import DeveloperModeIcon from '@mui/icons-material/DeveloperMode';
 
 const logoStyle = {
     width: '140px',
@@ -16,17 +19,17 @@ const logoStyle = {
 
 export default function Header({ mode }) {
     const navigate = useNavigate();
+    const location = useLocation();
     const [open, setOpen] = useState(false);
-    const pages = ['Home', 'About', 'Project', 'Resume'];
 
-    const toggleDrawer = () => () => {
-        setOpen(!open);
+    const toggleDrawer = (page) => {
+        setOpen(!open); // Toggle the mobile menu open/close state
+        if (page) {
+            navigate('/' + page);
+        }
     };
 
-    const handlePage = (page) => {
-        navigate('/' + (page === 'Home' ? '' : page.toLowerCase()));
-        setOpen(false);
-    };
+    const isActive = (page) => location.pathname === '/' + page;
 
     return (
         <div>
@@ -74,20 +77,37 @@ export default function Header({ mode }) {
                                 justifyContent: 'flex-end',
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={() => handlePage(page)}>
-                                    <Typography variant="body1" color="text.primary" fontWeight="bold">
-                                        {page}
-                                    </Typography>
-                                </MenuItem>
-                            ))}
+                            <MenuItem onClick={() => navigate('/')}>
+                                <CottageIcon color={isActive('home') ? "primary" : "text.primary"} />&nbsp;
+                                <Typography variant="body1" fontWeight="bold" color={isActive('home') ? "primary" : "text.primary"}>
+                                    Home
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => navigate('/about')}>
+                                <PersonIcon color={isActive('about') ? "primary" : "text.primary"} />&nbsp;
+                                <Typography variant="body1" fontWeight="bold" color={isActive('about') ? "primary" : "text.primary"}>
+                                    About
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => navigate('/project')}>
+                                <DeveloperModeIcon color={isActive('project') ? "primary" : "text.primary"} />&nbsp;
+                                <Typography variant="body1" fontWeight="bold" color={isActive('project') ? "primary" : "text.primary"}>
+                                    Project
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => navigate('/resume')}>
+                                <DescriptionIcon color={isActive('resume') ? "primary" : "text.primary"} />&nbsp;
+                                <Typography variant="body1" fontWeight="bold" color={isActive('resume') ? "primary" : "text.primary"}>
+                                    Resume
+                                </Typography>
+                            </MenuItem>
                         </Box>
                         <Box sx={{ display: { xs: 'block', md: 'none' } }}>
                             <Button
                                 variant="text"
                                 color="primary"
                                 aria-label="menu"
-                                onClick={toggleDrawer()}
+                                onClick={() => toggleDrawer()}
                                 sx={{ minWidth: '30px', p: '4px' }}
                             >
                                 {!open ? <MenuIcon /> : <CloseIcon />}
@@ -105,11 +125,30 @@ export default function Header({ mode }) {
                                 p: 2,
                             }}
                         >
-                            {pages.map((page) => (
-                                <MenuItem key={page} onClick={() => handlePage(page)} sx={{ justifyContent: 'center', width: '100%' }}>
-                                    <Typography textAlign="center" fontWeight="bold">{page}</Typography>
-                                </MenuItem>
-                            ))}
+                            <MenuItem onClick={() => toggleDrawer('home')} sx={{ justifyContent: 'center', width: '100%' }}>
+                                <CottageIcon color={isActive('home') ? "primary" : "text.primary"} />&nbsp;
+                                <Typography variant="body1" fontWeight="bold" color={isActive('home') ? "primary" : "text.primary"}>
+                                    Home
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => toggleDrawer('about')} sx={{ justifyContent: 'center', width: '100%' }}>
+                                <PersonIcon color={isActive('about') ? "primary" : "text.primary"} />&nbsp;
+                                <Typography variant="body1" fontWeight="bold" color={isActive('about') ? "primary" : "text.primary"}>
+                                    About
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => toggleDrawer('project')} sx={{ justifyContent: 'center', width: '100%' }}>
+                                <DeveloperModeIcon color={isActive('project') ? "primary" : "text.primary"} />&nbsp;
+                                <Typography variant="body1" fontWeight="bold" color={isActive('project') ? "primary" : "text.primary"}>
+                                    Project
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => toggleDrawer('resume')} sx={{ justifyContent: 'center', width: '100%' }}>
+                                <DescriptionIcon color={isActive('resume') ? "primary" : "text.primary"} />&nbsp;
+                                <Typography variant="body1" fontWeight="bold" color={isActive('resume') ? "primary" : "text.primary"}>
+                                    Resume
+                                </Typography>
+                            </MenuItem>
                         </Box>
                     </Collapse>
                 </Container>

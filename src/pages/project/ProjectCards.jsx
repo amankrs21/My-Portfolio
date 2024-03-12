@@ -7,7 +7,11 @@ import WebIcon from '@mui/icons-material/Web';
 
 export default function ProjectCards(props) {
     return (
-        <Card sx={{ maxWidth: 345, padding: 1 }}>
+        <Card sx={{
+            padding: 1,
+            maxWidth: 345,
+            bgcolor: props.mode === 'light' ? '#f2f2f2' : '#of1619',
+        }}>
             <CardMedia component="img" image={props.imgPath} alt="card-img" />
             <CardContent>
                 <Typography gutterBottom variant="h5" component="div" textAlign='center'>

@@ -32,7 +32,7 @@ import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import ProjectCards from './ProjectCards';
 
-export default function Project() {
+export default function Project({ mode }) {
     return (
         <Container maxWidth="lg">
             <Grid container spacing={3} my={3} justifyContent="center" alignItems="center">
@@ -46,6 +46,7 @@ export default function Project() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
                     <ProjectCards
+                        mode={mode}
                         title="Angular Todo"
                         imgPath="project/AngularTodo.png"
                         description="Sleek single-page application allowing users to create and manage todos. Leveraging Angular, it seamlessly saves todo entries in local storage, ensuring data persistence. An efficient and user-friendly solution for organizing tasks with a seamless user experience."
@@ -55,6 +56,7 @@ export default function Project() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
                     <ProjectCards
+                        mode={mode}
                         title="Angular Todo"
                         imgPath="project/AngularTodo.png"
                         description="Sleek single-page application allowing users to create and manage todos. Leveraging Angular, it seamlessly saves todo entries in local storage, ensuring data persistence. An efficient and user-friendly solution for organizing tasks with a seamless user experience."
@@ -64,6 +66,7 @@ export default function Project() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
                     <ProjectCards
+                        mode={mode}
                         title="Angular Todo"
                         imgPath="project/AngularTodo.png"
                         description="Sleek single-page application allowing users to create and manage todos. Leveraging Angular, it seamlessly saves todo entries in local storage, ensuring data persistence. An efficient and user-friendly solution for organizing tasks with a seamless user experience."
@@ -73,6 +76,7 @@ export default function Project() {
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
                     <ProjectCards
+                        mode={mode}
                         title="Angular Todo"
                         imgPath="project/AngularTodo.png"
                         description="Sleek single-page application allowing users to create and manage todos. Leveraging Angular, it seamlessly saves todo entries in local storage, ensuring data persistence. An efficient and user-friendly solution for organizing tasks with a seamless user experience."

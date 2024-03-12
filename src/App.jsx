@@ -37,7 +37,7 @@ export default function App() {
             <Route path='/' element={<Navigate to='/home' />} />
             <Route path="/home" element={<Home />} />
             <Route path='/about' element={<About mode={mode} />} />
-            <Route path='/project' element={<Project />} />
+            <Route path='/project' element={<Project mode={mode} />} />
             <Route path='/resume' element={<Resume />} />
             <Route path="/404" element={<PageNotFound />} />
           </Routes>
