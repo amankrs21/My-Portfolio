@@ -1,33 +1,3 @@
-// import { Container, Grid, Typography } from '@mui/material';
-// import React from 'react';
-// import ProjectCards from './ProjectCards';
-
-// export default function Project() {
-//     return (
-//         <Container maxWidth="lg">
-//             <Grid container spacing={3} my={3}>
-//                 <Grid item xs={12}>
-//                     <Typography variant="h3" textAlign='center'>
-//                         MY RECENT <strong style={{ color: '#0a66c2' }}> WORKS </strong>
-//                     </Typography>
-//                     <Typography variant="body2" textAlign='center' my={1}>
-//                         Here are few Projects I've worked on recently.
-//                     </Typography>
-//                 </Grid>
-//                 <Grid item xs={12} md={4} sx={{ display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-//                     <ProjectCards
-//                         title="Angular Todo"
-//                         imgPath="project/AngularTodo.png"
-//                         description="Sleek single-page application allowing users to create and manage todos. Leveraging Angular, it seamlessly saves todo entries in local storage, ensuring data persistence. An efficient and user-friendly solution for organizing tasks with a seamless user experience."
-//                         ghLink="https://github.com/amankrs21/AngularTodo"
-//                         demoLink="https://angulartodo.pages.dev/"
-//                     />
-//                 </Grid>
-//             </Grid>
-//         </Container>
-//     )
-// }
-
 import { Container, Grid, Typography } from '@mui/material';
 import React from 'react';
 import ProjectCards from './ProjectCards';
@@ -47,31 +17,48 @@ export default function Project({ mode }) {
                 <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
                     <ProjectCards
                         mode={mode}
-                        title="Angular Todo"
-                        imgPath="project/AngularTodo.png"
-                        description="Sleek single-page application allowing users to create and manage todos. Leveraging Angular, it seamlessly saves todo entries in local storage, ensuring data persistence. An efficient and user-friendly solution for organizing tasks with a seamless user experience."
-                        ghLink="https://github.com/amankrs21/AngularTodo"
-                        demoLink="https://angulartodo.pages.dev/"
+                        title="MERN Todo"
+                        imgPath="project/TodoMern.png"
+                        description="Leverages the power of the MERN stack to provide a robust and secure platform for managing todo lists. It features JWT authentication for secure access and protected routes to ensure that only authenticated users can access certain functionalities."
+                        ghLink="https://github.com/amankrs21/TodoMern"
+                        demoLink="https://todomern.pages.dev/"
                     />
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
                     <ProjectCards
                         mode={mode}
-                        title="Angular Todo"
-                        imgPath="project/AngularTodo.png"
-                        description="Sleek single-page application allowing users to create and manage todos. Leveraging Angular, it seamlessly saves todo entries in local storage, ensuring data persistence. An efficient and user-friendly solution for organizing tasks with a seamless user experience."
-                        ghLink="https://github.com/amankrs21/AngularTodo"
-                        demoLink="https://angulartodo.pages.dev/"
+                        title="Todo React Django"
+                        imgPath="project/TodoReactDjango.png"
+                        description="Built on React and Django, utilizes JWT Authentication and Material UI for a seamless user experience. Users can manage tasks efficiently, leveraging React's dynamic frontend and Django's robust backend. MUI enhances the application's aesthetic appeal and usability."
+                        ghLink="https://github.com/amankrs21/TodoReactDjango"
                     />
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
                     <ProjectCards
                         mode={mode}
-                        title="Angular Todo"
-                        imgPath="project/AngularTodo.png"
-                        description="Sleek single-page application allowing users to create and manage todos. Leveraging Angular, it seamlessly saves todo entries in local storage, ensuring data persistence. An efficient and user-friendly solution for organizing tasks with a seamless user experience."
-                        ghLink="https://github.com/amankrs21/AngularTodo"
-                        demoLink="https://angulartodo.pages.dev/"
+                        title="Todo Angular Dotnet"
+                        imgPath="project/TodoAngularNet.png"
+                        description="Todo application built using Angular for the frontend and Dotnet C# for the backend. It provides full CRUD functionality for managing your tasks. Additionally, the application includes user authentication using JWT Tokens, allowing secure access to todo operations."
+                        ghLink="https://github.com/amankrs21/TodoAngularNet"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
+                    <ProjectCards
+                        mode={mode}
+                        title="Finance"
+                        imgPath="project/Finance.png"
+                        description="This project is a web application developed using React for the frontend and Django for the backend. It provides features such as user authentication, blog management, about, contact, and portfolio pages with interactive graphs, and supports Payment Gateway integration."
+                        ghLink="https://github.com/amankrs21/FinanceReactDjango"
+                    />
+                </Grid>
+                <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
+                    <ProjectCards
+                        mode={mode}
+                        title="React Expreiment's"
+                        imgPath="project/ReactExperiments.png"
+                        description="React Experiments showcase Password Validation, Calculator, BMI Calculator, Weather App, and Todo lists. Each highlights React's prowess in interactive UIs. From secure password handling to weather forecasting, these experiments exhibit React's versatility in various functionalities."
+                        ghLink="https://github.com/amankrs21/FinanceReactDjango"
+                        demoLink="https://reactexperiments.pages.dev/"
                     />
                 </Grid>
                 <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
