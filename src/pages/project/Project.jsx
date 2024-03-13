@@ -57,7 +57,7 @@ export default function Project({ mode }) {
                         title="React Expreiment's"
                         imgPath="project/ReactExperiments.png"
                         description="React Experiments showcase Password Validation, Calculator, BMI Calculator, Weather App, and Todo lists. Each highlights React's prowess in interactive UIs. From secure password handling to weather forecasting, these experiments exhibit React's versatility in various functionalities."
-                        ghLink="https://github.com/amankrs21/FinanceReactDjango"
+                        ghLink="https://github.com/amankrs21/reactexperiments"
                         demoLink="https://reactexperiments.pages.dev/"
                     />
                 </Grid>
