@@ -1,8 +1,9 @@
 import PropTypes from 'prop-types';
 import React, { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { Box } from '@mui/material';
 import {
-    Box, AppBar, Toolbar, Button, Container, Typography, MenuItem, Collapse,
+    AppBar, Toolbar, Button, Container, Typography, MenuItem, Collapse,
 } from '@mui/material';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';

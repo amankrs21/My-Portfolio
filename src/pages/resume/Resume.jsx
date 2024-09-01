@@ -1,9 +1,18 @@
-import React, { useState, useEffect } from 'react';
-import { Container, Grid, Button } from '@mui/material';
+import { pdfjs } from 'react-pdf';
+
+pdfjs.GlobalWorkerOptions.workerSrc = new URL(
+    'pdfjs-dist/build/pdf.worker.min.mjs',
+    import.meta.url,
+).toString();
+
+import Grid from '@mui/material/Grid2';
+import { Container, Button } from '@mui/material';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
-import { Document, Page, pdfjs } from 'react-pdf';
-import "react-pdf/dist/esm/Page/AnnotationLayer.css";
-pdfjs.GlobalWorkerOptions.workerSrc = `//unpkg.com/pdfjs-dist@${pdfjs.version}/build/pdf.worker.min.js`;
+
+import { useState, useEffect } from 'react';
+import { Document, Page } from 'react-pdf';
+import 'react-pdf/dist/Page/TextLayer.css';
+import 'react-pdf/dist/Page/AnnotationLayer.css';
 
 import pdf from './Resume.pdf';
 
@@ -28,11 +37,15 @@ export default function Resume() {
                     &nbsp;Download CV
                 </Button>
             </Grid>
+
             <Grid container justifyContent="center" my={5}>
                 <Document file={pdf}>
-                    <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} renderTextLayer={false} renderAnnotationLayer={false} />
+                    <Page pageNumber={1} scale={width > 786 ? 1.7 : 0.6} />
                 </Document>
             </Grid>
         </Container>
-    )
+    );
 }
+
+
+

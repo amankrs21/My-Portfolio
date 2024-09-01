@@ -1,7 +1,8 @@
 import './About.css';
-import React from 'react'
+import React from 'react';
+import Grid from '@mui/material/Grid2';
 import {
-    Container, Grid, Typography
+    Container, Typography
 } from '@mui/material';
 import SkillSet from './SkillSet';
 import ToolsUse from './ToolsUse';
@@ -10,8 +11,8 @@ import GitHubCalendar from "react-github-calendar";
 export default function About({ mode }) {
     return (
         <Container maxWidth='lg' sx={{ py: 1 }} id="home">
-            <Grid container my={1}>
-                <Grid item md={8} pl={2} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <Grid container mt={2} mb={3}>
+                <Grid size={{ md: 8 }} className='about-intro'>
                     <Typography variant="h3" textAlign='center'>
                         KNOW WHO <strong style={{ color: '#0a66c2' }}> I'M </strong>
                     </Typography>
@@ -28,45 +29,49 @@ export default function About({ mode }) {
                         Always learning, always growing! 🌱
                         <br /><br />
                         Besides coding, I'm also passionate about,
-                        <strong style={{ color: '#0a66c2' }}> Geo Politics 🌍, Travelling ✈️ </strong> and
+                        <strong style={{ color: '#0a66c2' }}> Geo Politics 🌍, Travelling ✈️, Watching Movies 🎥 </strong> and
                         <strong style={{ color: '#0a66c2' }}> Reading Books 📚</strong>.
                         Always exploring new horizons! 🚀
                     </Typography>
                 </Grid>
-                <Grid container item md={4} sx={{ justifyContent: 'center' }}>
+                <Grid size={{ md: 4 }} className='about-logo'>
                     <img
                         src="home-dev.svg"
                         alt="home pic"
                         className="img-fluid"
-                        style={{ maxHeight: '450px', width: '100%' }}
+                        style={{ maxHeight: '350px', width: '100%' }}
                     />
                 </Grid>
             </Grid>
+
             <Grid container justifyContent="center" my={2}>
-                <Grid item xs={12} md={8}>
+                <Grid size={{ md: 8, xs: 12 }}>
                     <Typography variant="h6" color="primary" align="center">
                         "Code your path, debug your challenges 💻, and always remember: semicolons may break your code, but not your spirit. ✨"
                     </Typography>
                 </Grid>
             </Grid>
+
             <Grid container justifyContent="center" mt={6}>
-                <Grid item xs={12} md={10}>
+                <Grid size={{ md: 10, xs: 12 }}>
                     <Typography variant="h3" align="center">
                         PROFESSIONAL <strong style={{ color: '#0a66c2' }}> SKILLSET </strong>
                     </Typography>
                     <SkillSet />
                 </Grid>
             </Grid>
+
             <Grid container justifyContent="center" mt={6}>
-                <Grid item xs={12} md={10}>
+                <Grid size={{ md: 10, xs: 12 }}>
                     <Typography variant="h3" align="center">
                         <strong style={{ color: '#0a66c2' }}>TOOLS </strong> I USE
                     </Typography>
                     <ToolsUse />
                 </Grid>
             </Grid>
+
             <Grid container justifyContent="center" mt={5}>
-                <Grid item xs={12} md={12}>
+                <Grid size={{ md: 12, xs: 12 }}>
                     <Typography variant="h3" align="center">
                         DAYS I <strong style={{ color: '#0a66c2' }}>CODE</strong>
                     </Typography>

@@ -1,6 +1,7 @@
 import React from 'react';
+import { Box } from '@mui/material';
 import {
-    Card, CardMedia, CardContent, Typography, Button, Box
+    Card, CardMedia, CardContent, Typography, Button
 } from '@mui/material';
 import FacebookIcon from '@mui/icons-material/GitHub';
 import WebIcon from '@mui/icons-material/Web';

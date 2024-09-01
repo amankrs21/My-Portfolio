@@ -1,20 +1,21 @@
-import { Container, Grid, Typography } from '@mui/material';
-import React from 'react';
+import Grid from '@mui/material/Grid2';
+import { Container, Typography } from '@mui/material';
+
 import ProjectCards from './ProjectCards';
 
 export default function Project({ mode }) {
     return (
         <Container maxWidth="lg">
             <Grid container spacing={3} my={3} justifyContent="center" alignItems="center">
-                <Grid item xs={12}>
+                <Grid size={{ xs: 12 }}>
                     <Typography variant="h3" textAlign='center'>
                         MY RECENT <strong style={{ color: '#0a66c2' }}>WORKS</strong>
                     </Typography>
-                    <Typography variant="body2" textAlign='center' my={1}>
+                    <Typography variant="body1" textAlign='center' mt={1}>
                         Here are a few Projects I've worked on recently.
                     </Typography>
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
+                <Grid container size={{ xs: 12, sm: 6, md: 4 }} justifyContent="center">
                     <ProjectCards
                         mode={mode}
                         title="MERN Todo"
@@ -24,7 +25,7 @@ export default function Project({ mode }) {
                         demoLink="https://todomern.pages.dev/"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
+                <Grid container size={{ xs: 12, sm: 6, md: 4 }} justifyContent="center">
                     <ProjectCards
                         mode={mode}
                         title="Todo React Django"
@@ -33,7 +34,7 @@ export default function Project({ mode }) {
                         ghLink="https://github.com/amankrs21/TodoReactDjango"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
+                <Grid container size={{ xs: 12, sm: 6, md: 4 }} justifyContent="center">
                     <ProjectCards
                         mode={mode}
                         title="Todo Angular Dotnet"
@@ -42,7 +43,7 @@ export default function Project({ mode }) {
                         ghLink="https://github.com/amankrs21/TodoAngularNet"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
+                <Grid container size={{ xs: 12, sm: 6, md: 4 }} justifyContent="center">
                     <ProjectCards
                         mode={mode}
                         title="Finance"
@@ -51,7 +52,7 @@ export default function Project({ mode }) {
                         ghLink="https://github.com/amankrs21/FinanceReactDjango"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
+                <Grid container size={{ xs: 12, sm: 6, md: 4 }} justifyContent="center">
                     <ProjectCards
                         mode={mode}
                         title="React Expreiment's"
@@ -61,7 +62,7 @@ export default function Project({ mode }) {
                         demoLink="https://reactexperiments.pages.dev/"
                     />
                 </Grid>
-                <Grid item xs={12} sm={6} md={4} display="flex" justifyContent="center">
+                <Grid container size={{ xs: 12, sm: 6, md: 4 }} justifyContent="center">
                     <ProjectCards
                         mode={mode}
                         title="Angular Todo"

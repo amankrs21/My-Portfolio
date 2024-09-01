@@ -1,13 +1,14 @@
 import './Home.css';
 import React from 'react';
-import {
-    Container, Grid, Typography
-} from '@mui/material';
+
+import Grid from '@mui/material/Grid2';
+import { Container, Grid2, Typography } from '@mui/material';
 import Typewriter from "typewriter-effect";
+
 import Lottie from 'react-lottie';
 import WorkDev from './work.json';
 
-export default function HomeSection() {
+function Home() {
     const defaultOptions = {
         loop: true,
         autoplay: true,
@@ -18,11 +19,11 @@ export default function HomeSection() {
     };
     return (
         <Container maxWidth='lg' sx={{ py: 5, backgroundImage: 'home-bg.jpg' }} id="home">
-            <Grid container my={5}>
-                <Grid item md={7} pl={2} sx={{ display: 'flex', flexDirection: 'column', justifyContent: 'center' }}>
+            <Grid2 container mt={3} mb={15}>
+                <Grid size={{ md: 7, pl: 2 }} className="home-autopart">
                     <Typography variant="h3" sx={{ pb: 2 }} className="heading">
                         Hi There!{' '}
-                        <span className="wave" role="img" aria-labelledby="wave">
+                        <span className="home-wave" role="img" aria-labelledby="wave">
                             👋🏻
                         </span>
                     </Typography>
@@ -32,14 +33,13 @@ export default function HomeSection() {
                         <strong style={{ color: '#0a66c2' }}> AMAN SINGH</strong>
                     </Typography>
 
-                    <Typography variant="h4" color='primary' fontWeight={700} sx={{ mt: 6 }}>
+                    <Typography variant="h4" gutterBottom color='primary' fontWeight={500} sx={{ mt: 6 }}>
                         <Typewriter
                             options={{
                                 strings: [
-                                    'Software Developer',
-                                    'DevOps Engineer',
-                                    'MERN Stack Developer',
-                                    'Gen A.I. Developer',
+                                    'DevOps Engineer @ TCS 🚀',
+                                    'Full-time Software Developer 💻',
+                                    'Genrative AI Enthusiast 🤖',
                                 ],
                                 autoStart: true,
                                 loop: true,
@@ -49,16 +49,17 @@ export default function HomeSection() {
                     </Typography>
                 </Grid>
 
-                <Grid item md={5}>
+                <Grid size={{ md: 5 }} className='home-lotties'>
                     <Lottie
                         options={defaultOptions}
                         height={400}
                         width={400}
                     />
                 </Grid>
-            </Grid>
-            <Grid container mt={5} spacing={3}>
-                <Grid item md={8}>
+            </Grid2>
+
+            <Grid2 container mt={5} spacing={3}>
+                <Grid size={{ md: 8 }}>
                     <Typography variant="h3" textAlign='center'>
                         LET ME <strong style={{ color: '#0a66c2' }}> INTRODUCE </strong> MYSELF
                     </Typography>
@@ -81,12 +82,12 @@ export default function HomeSection() {
                         <strong style={{ color: '#0a66c2' }}> AWS Cloud Enginnering.</strong>
                     </Typography>
                 </Grid>
-                <Grid container item md={4} sx={{ justifyContent: 'center' }}>
+                <Grid2 size={{ md: 4 }} className='home-avatar'>
                     <img src="avatar.svg" alt="avatar" />
-                </Grid>
-            </Grid>
-            {/* <Grid sx={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-            </Grid> */}
+                </Grid2>
+            </Grid2>
         </Container>
     );
 }
+
+export default Home;
