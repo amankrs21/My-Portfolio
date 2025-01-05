@@ -9,6 +9,8 @@ import Lottie from 'react-lottie';
 import WorkDev from './work.json';
 
 function Home() {
+    window.scrollTo(0, 0);
+
     const defaultOptions = {
         loop: true,
         autoplay: true,

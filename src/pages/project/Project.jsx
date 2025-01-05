@@ -4,6 +4,8 @@ import { Container, Typography } from '@mui/material';
 import ProjectCards from './ProjectCards';
 
 export default function Project({ mode }) {
+    window.scrollTo(0, 0);
+
     return (
         <Container maxWidth="lg">
             <Grid container spacing={3} my={3} justifyContent="center" alignItems="center">

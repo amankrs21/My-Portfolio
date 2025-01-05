@@ -9,6 +9,8 @@ import ToolsUse from './ToolsUse';
 import GitHubCalendar from "react-github-calendar";
 
 export default function About({ mode }) {
+    window.scrollTo(0, 0);
+
     return (
         <Container maxWidth='lg' sx={{ py: 1 }} id="home">
             <Grid container mt={2} mb={3}>
