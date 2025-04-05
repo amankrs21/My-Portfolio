@@ -1,11 +1,11 @@
-import React from 'react';
 import { Box } from '@mui/material';
 import {
     Card, CardMedia, CardContent, Typography, Button
 } from '@mui/material';
-import FacebookIcon from '@mui/icons-material/GitHub';
-import WebIcon from '@mui/icons-material/Web';
+import { GitHub, RocketLaunch } from '@mui/icons-material';
 
+
+// ProjectCards component
 export default function ProjectCards(props) {
     return (
         <Card sx={{
@@ -22,18 +22,18 @@ export default function ProjectCards(props) {
                     {props.description}
                 </Typography>
                 <Box mt={2} display="flex" justifyContent="center">
-                    <Button variant="contained" href={props.ghLink} target="_blank">
-                        <FacebookIcon /> &nbsp; Github
+                    <Button variant="contained" href={props.ghLink} target="_blank" startIcon={<GitHub />}>
+                        Github
                     </Button>
-                    {!props.isBlog && props.demoLink && (
+                    {props.demoLink && (
                         <Button
+                            target="_blank"
                             variant="contained"
                             href={props.demoLink}
-                            target="_blank"
                             style={{ marginLeft: "10px" }}
+                            startIcon={<RocketLaunch />}
                         >
-                            <WebIcon /> &nbsp;
-                            {"Demo"}
+                            Try It
                         </Button>
                     )}
                 </Box>
