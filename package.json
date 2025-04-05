@@ -4,16 +4,18 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "vite --host --port 80",
-    "dev": "vite",
+    "start": "vite",
+    "dev": "vite --host",
     "build": "vite build",
     "lint": "eslint .",
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.14.0",
+    "@emotion/styled": "^11.14.0",
     "@fontsource/roboto": "^5.0.14",
-    "@mui/icons-material": "^6.0.1",
-    "@mui/material": "^6.0.1",
+    "@mui/icons-material": "^7.0.1",
+    "@mui/material": "^7.0.1",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-github-calendar": "^4.3.0",
