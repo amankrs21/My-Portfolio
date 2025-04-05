@@ -1,7 +1,16 @@
 * {
+    user-select: none;
+    /* pointer-events: none; */
     scrollbar-width: thin;
     scroll-behavior: smooth;
     scrollbar-color: #888 transparent;
+}
+
+/* HEADER CSS */
+.header-logo {
+    height: auto;
+    width: 140px;
+    pointer-events: none;
 }
 
 /* HOME CSS */
