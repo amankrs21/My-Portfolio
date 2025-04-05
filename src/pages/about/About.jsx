@@ -1,53 +1,46 @@
-import './About.css';
-import React from 'react';
-import Grid from '@mui/material/Grid';
-import {
-    Container, Typography
-} from '@mui/material';
+import GitHubCalendar from "react-github-calendar";
+import { Container, Grid, Typography } from '@mui/material';
+
 import SkillSet from './SkillSet';
 import ToolsUse from './ToolsUse';
-import GitHubCalendar from "react-github-calendar";
 
 export default function About({ mode }) {
     window.scrollTo(0, 0);
 
     return (
-        <Container maxWidth='lg' sx={{ py: 1 }} id="home">
-            <Grid container mt={2} mb={3}>
-                <Grid size={{ md: 8 }} className='about-intro'>
-                    <Typography variant="h3" textAlign='center'>
-                        KNOW WHO <strong style={{ color: '#0a66c2' }}> I'M </strong>
+        <Container maxWidth="lg">
+            <Grid container spacing={4} mt={2} mb={2}>
+                <Grid size={{ xs: 12, md: 8 }} className="about-intro">
+                    <Typography variant="h3" textAlign="center">
+                        KNOW WHO <strong style={{ color: '#0a66c2' }}> I AM </strong>
                     </Typography>
-                    <Typography variant="h6" mt={4} p={3}>
-                        Hey there! I'm <strong style={{ color: '#0a66c2' }}>Aman Singh</strong> from the lively <strong style={{ color: '#0a66c2' }}>Vaishali, Bihar </strong>🌟.
-                        <br />
-                        Passion drives me as a Software Developer 👨‍💻, and I'm currently bringing ideas to life at
-                        <strong style={{ color: '#0a66c2' }}> Tata Consultancy Services.</strong>
+
+                    <Typography variant="h6" mt={2} p={2} sx={{ textAlign: 'justify' }}>
+                        Hey! I'm <strong style={{ color: '#0a66c2' }}>Aman Singh</strong> from the heart of
+                        <strong style={{ color: '#0a66c2' }}> India 🇮🇳</strong>.
+                        I completed my BCA from
+                        <strong style={{ color: '#0a66c2' }}> Parul University 🎓</strong> and am currently pursuing an MCA at
+                        <strong style={{ color: '#0a66c2' }}> Sastra University 🚀</strong> — always learning and evolving.
                         <br /><br />
-                        Just finished my Bachelor's in Computer Application (BCA) at
-                        <strong style={{ color: '#0a66c2' }}> Parul University 🎓 </strong>
-                        and now, I'm diving deeper into tech with my Master's in Computer Application (MCA) at
-                        <strong style={{ color: '#0a66c2' }}> Sastra University 🚀.</strong><br />
-                        Always learning, always growing! 🌱
+                        I’ve engineered automation tools at <strong style={{ color: '#0a66c2' }}>TCS</strong> that cut down dev effort, simplified deployments, and made life easier for both teams and clients — tech that just works, and works smart.
                         <br /><br />
-                        Besides coding, I'm also passionate about,
-                        <strong style={{ color: '#0a66c2' }}> Geo Politics 🌍, Travelling ✈️, Watching Movies 🎥 </strong> and
-                        <strong style={{ color: '#0a66c2' }}> Reading Books 📚</strong>.
-                        Always exploring new horizons! 🚀
+                        Outside of tech, I’m all about movies 🎥, travel ✈️, and books 📚. I believe a balanced life fuels creative energy — both in code and beyond.
+                        <br /><br />
+                        I’m still learning, still building, and still chasing better — not just in tech 👨‍💻, but in who I become through it 🌱.
                     </Typography>
                 </Grid>
-                <Grid size={{ md: 4 }} className='about-logo'>
+
+                <Grid size={{ xs: 12, md: 4 }} className="about-logo" sx={{ display: 'flex', justifyContent: 'center' }}>
                     <img
-                        src="home-dev.svg"
                         alt="home pic"
-                        className="img-fluid"
-                        style={{ maxHeight: '350px', width: '100%' }}
+                        src="home-dev.svg"
+                        style={{ maxHeight: '350px', width: '100%', objectFit: 'contain' }}
                     />
                 </Grid>
             </Grid>
 
-            <Grid container justifyContent="center" my={2}>
-                <Grid size={{ md: 8, xs: 12 }}>
+            <Grid container justifyContent="center" my={3}>
+                <Grid size={{ xs: 12, md: 8 }}>
                     <Typography variant="h6" color="primary" align="center">
                         "Code your path, debug your challenges 💻, and always remember: semicolons may break your code, but not your spirit. ✨"
                     </Typography>
@@ -55,7 +48,7 @@ export default function About({ mode }) {
             </Grid>
 
             <Grid container justifyContent="center" mt={6}>
-                <Grid size={{ md: 10, xs: 12 }}>
+                <Grid size={{ xs: 12, md: 10 }}>
                     <Typography variant="h3" align="center">
                         PROFESSIONAL <strong style={{ color: '#0a66c2' }}> SKILLSET </strong>
                     </Typography>
@@ -64,7 +57,7 @@ export default function About({ mode }) {
             </Grid>
 
             <Grid container justifyContent="center" mt={6}>
-                <Grid size={{ md: 10, xs: 12 }}>
+                <Grid size={{ xs: 12, md: 10 }}>
                     <Typography variant="h3" align="center">
                         <strong style={{ color: '#0a66c2' }}>TOOLS </strong> I USE
                     </Typography>
@@ -72,8 +65,8 @@ export default function About({ mode }) {
                 </Grid>
             </Grid>
 
-            <Grid container justifyContent="center" mt={5}>
-                <Grid size={{ md: 12, xs: 12 }}>
+            <Grid container justifyContent="center" mt={6}>
+                <Grid size={{ xs: 12 }}>
                     <Typography variant="h3" align="center">
                         DAYS I <strong style={{ color: '#0a66c2' }}>CODE</strong>
                     </Typography>

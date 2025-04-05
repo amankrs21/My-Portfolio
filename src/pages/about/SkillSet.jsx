@@ -1,14 +1,14 @@
-import React from "react";
 import { Grid, Stack, Tooltip } from "@mui/material";
+import { FaAws } from "react-icons/fa";
+import { VscAzure } from "react-icons/vsc";
+import { DiNodejs, DiJava, DiDjango } from "react-icons/di";
 import {
-    DiJavascript1, DiNodejs, DiMongodb, DiPython, DiGit,
-    DiJava, DiAngularSimple, DiDjango
-} from "react-icons/di";
-import {
-    SiDotnet, SiPostgresql, SiPandas, SiNumpy, SiScikitlearn
+    SiDotnet, SiPostgresql, SiPandas, SiNumpy, SiScikitlearn, SiLangchain, SiTensorflow,
+    SiPytorch, SiFlask, SiHuggingface, SiReact, SiMongodb, SiPython, SiAngular, SiGit
 } from "react-icons/si";
-import { FaAws, FaReact } from "react-icons/fa";
 
+
+// Techstack Component
 export default function Techstack() {
     return (
         <Stack >
@@ -20,81 +20,106 @@ export default function Techstack() {
                 justifyContent="center"
                 style={{ paddingBottom: "50px" }}
             >
-                <Tooltip title="Python">
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <DiPython className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="JAVA" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Python">
+                        <SiPython className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="JAVA" sx={{ cursor: 'pointer' }}>
                         <DiJava className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="Dotnet" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Dotnet" sx={{ cursor: 'pointer' }}>
                         <SiDotnet className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="JavaScript" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <DiJavascript1 className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="AWS" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Amazon Web Service" sx={{ cursor: 'pointer' }}>
                         <FaAws className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="Django" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <DiDjango className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="Numpy" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <SiNumpy className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="Pandas" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <SiPandas className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="SciKit-Learn" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <SiScikitlearn className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="Postgress" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <SiPostgresql className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="NodeJS" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Microsoft Azure" sx={{ cursor: 'pointer' }}>
+                        <VscAzure className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="NodeJS" sx={{ cursor: 'pointer' }}>
                         <DiNodejs className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="ReactJS" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <FaReact className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="Angular" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <DiAngularSimple className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="MongoDB" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <DiMongodb className="tech-icons" />
-                    </Grid>
-                </Tooltip>
-                <Tooltip title="Git" sx={{ cursor: 'pointer' }}>
-                    <Grid size={{ md: 2.3, xs: 5 }}>
-                        <DiGit className="tech-icons" />
-                    </Grid>
-                </Tooltip>
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="ReactJS" sx={{ cursor: 'pointer' }}>
+                        <SiReact className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Angular" sx={{ cursor: 'pointer' }}>
+                        <SiAngular className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Django" sx={{ cursor: 'pointer' }}>
+                        <DiDjango className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Flask" sx={{ cursor: 'pointer' }}>
+                        <SiFlask className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Numpy" sx={{ cursor: 'pointer' }}>
+                        <SiNumpy className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Pandas" sx={{ cursor: 'pointer' }}>
+                        <SiPandas className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="SciKit-Learn" sx={{ cursor: 'pointer' }}>
+                        <SiScikitlearn className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Tensorflow" sx={{ cursor: 'pointer' }}>
+                        <SiTensorflow className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="PyTorch" sx={{ cursor: 'pointer' }}>
+                        <SiPytorch className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="LangChain" sx={{ cursor: 'pointer' }}>
+                        <SiLangchain className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="HuggingFace Transformers" sx={{ cursor: 'pointer' }}>
+                        <SiHuggingface className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Git" sx={{ cursor: 'pointer' }}>
+                        <SiGit className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="Postgress" sx={{ cursor: 'pointer' }}>
+                        <SiPostgresql className="tech-icons" />
+                    </Tooltip>
+                </Grid>
+                <Grid size={{ md: 2.3, xs: 5 }}>
+                    <Tooltip arrow title="MongoDB" sx={{ cursor: 'pointer' }}>
+                        <SiMongodb className="tech-icons" />
+                    </Tooltip>
+                </Grid>
             </Grid>
         </Stack>
     );
