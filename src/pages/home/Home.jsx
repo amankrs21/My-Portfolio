@@ -61,12 +61,12 @@ export default function Home() {
                     </Typography>
 
                     <Typography variant="h6" mt={3} px={2}>
-                        I'm a passionate software developer with a deep love for building robust, scalable, and elegant digital solutions. From automating workflows to engineering AI-powered tools, I thrive in solving real-world problems with clean code and sharp design.
+                        I’m a developer who loves crafting practical and scalable software. From streamlining DevOps pipelines to experimenting with AI, I enjoy solving real-world problems with clean, efficient code.
                         <br /><br />
-                        Skilled in
-                        <strong style={{ color: "#0a66c2" }}> Python, Data Science, GEN AI, MERN, MEAN, .Net, and AWS</strong>, I'm constantly pushing boundaries — blending DevOps engineering with Generative AI to craft impactful products.
+                        I'm proficient in stacks like
+                        <strong style={{ color: "#0a66c2" }}> Python, MERN, MEAN, .NET</strong> and leverage platforms like <strong style={{ color: "#0a66c2" }}>AWS</strong> to deliver cloud-ready solutions. My interest in <strong style={{ color: "#0a66c2" }}>Generative AI</strong> pushes me to constantly innovate and learn.
                         <br /><br />
-                        I believe in continuous learning and growth. Whether it's diving into new frameworks, refining articulation, or optimizing cloud infrastructure — I take pride in staying curious and leveling up.
+                        I believe in lifelong learning — from exploring new frameworks to optimizing cloud systems, I'm always leveling up.
                         <br /><br />
                         Currently working at <strong style={{ color: "#0a66c2" }}>Tata Consultancy Services</strong>, I enjoy building things with an engineer’s mindset and a creator’s heart.
                     </Typography>
@@ -76,6 +76,11 @@ export default function Home() {
                     <img src="avatar.svg" alt="avatar" style={{ width: "100%", maxWidth: 300 }} />
                 </Grid>
             </Grid>
+
+            {/* <Typography variant="h6" align="center" mt={6} color="text.secondary">
+                Curious to see what I’ve built? Head over to the <strong style={{ color: "#0a66c2" }}>Projects</strong> section 🚀
+            </Typography> */}
+
         </Container>
     );
 }
