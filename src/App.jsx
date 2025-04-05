@@ -11,6 +11,7 @@ import Loading from './components/Loading';
 import Project from './pages/project/Project';
 import PageNotFound from './pages/404/PageNotFound';
 import getLPTheme from './components/theme/getLPTheme';
+import Contact from './pages/contact/Contact';
 
 
 // App component
@@ -48,6 +49,7 @@ export default function App() {
             <Routes>
               <Route path='/home' element={<Home />} />
               <Route path='/resume' element={<Resume />} />
+              <Route path='/contact' element={<Contact />} />
               <Route path='/404' element={<PageNotFound />} />
               <Route path='/about' element={<About mode={mode} />} />
               <Route path='/project' element={<Project mode={mode} />} />

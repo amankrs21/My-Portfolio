@@ -6,7 +6,7 @@ import {
     AppBar, Toolbar, Button, Container, Typography, MenuItem, Collapse, Tooltip, IconButton
 } from '@mui/material';
 import {
-    Menu, Close, Person, Cottage, Description, DeveloperMode, WbSunnyRounded, ModeNightRounded
+    Menu, Close, Person, Cottage, Description, DeveloperMode, ContactPage, WbSunnyRounded, ModeNightRounded
 } from '@mui/icons-material';
 
 
@@ -88,6 +88,12 @@ export default function Header({ mode, modeChange }) {
                                     Project
                                 </Typography>
                             </MenuItem>
+                            <MenuItem onClick={() => navigate('/contact')}>
+                                <ContactPage color={isActive('contact') ? "primary" : "text.primary"} />
+                                <Typography variant="body1" fontWeight="bold" color={isActive('contact') ? "primary" : "text.primary"}>
+                                    Contact
+                                </Typography>
+                            </MenuItem>
                             <MenuItem onClick={() => navigate('/resume')}>
                                 <Description color={isActive('resume') ? "primary" : "text.primary"} />
                                 <Typography variant="body1" fontWeight="bold" color={isActive('resume') ? "primary" : "text.primary"}>
@@ -151,6 +157,12 @@ export default function Header({ mode, modeChange }) {
                                 <DeveloperMode color={isActive('project') ? "primary" : "text.primary"} />
                                 <Typography variant="body1" fontWeight="bold" color={isActive('project') ? "primary" : "text.primary"}>
                                     Project
+                                </Typography>
+                            </MenuItem>
+                            <MenuItem onClick={() => toggleDrawer('contact')} sx={{ justifyContent: 'center', width: '100%' }}>
+                                <ContactPage color={isActive('contact') ? "primary" : "text.primary"} />
+                                <Typography variant="body1" fontWeight="bold" color={isActive('contact') ? "primary" : "text.primary"}>
+                                    Contact
                                 </Typography>
                             </MenuItem>
                             <MenuItem onClick={() => toggleDrawer('resume')} sx={{ justifyContent: 'center', width: '100%' }}>
