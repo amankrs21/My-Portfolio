@@ -1,6 +1,5 @@
 import React from "react";
-import Grid from "@mui/material/Grid2";
-import { Stack, Tooltip } from "@mui/material";
+import { Grid, Stack, Tooltip } from "@mui/material";
 import {
     DiJavascript1, DiNodejs, DiMongodb, DiPython, DiGit,
     DiJava, DiAngularSimple, DiDjango

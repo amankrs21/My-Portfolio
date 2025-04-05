@@ -1,5 +1,4 @@
-import Grid from '@mui/material/Grid2';
-import { Container, Typography } from '@mui/material';
+import { Grid, Container, Typography } from '@mui/material';
 
 import ProjectCards from './ProjectCards';
 

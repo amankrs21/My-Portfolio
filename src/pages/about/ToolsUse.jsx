@@ -1,9 +1,10 @@
 import React from "react";
-import Grid from "@mui/material/Grid2";
+import Grid from '@mui/material/Grid';
 import { Stack, Tooltip } from "@mui/material";
 import {
-    SiVisualstudiocode, SiInsomnia, SiSlack, SiJetbrains, SiLinux,
+    SiInsomnia, SiSlack, SiJetbrains, SiLinux,
 } from "react-icons/si";
+import { VscVscode } from "react-icons/vsc";
 
 export default function ToolsUse() {
     return (
@@ -23,7 +24,7 @@ export default function ToolsUse() {
                 </Tooltip>
                 <Tooltip title="VS Code" sx={{ cursor: 'pointer' }}>
                     <Grid size={{ md: 2.3, xs: 5 }}>
-                        <SiVisualstudiocode className="tech-icons" />
+                        <VscVscode className="tech-icons" />
                     </Grid>
                 </Tooltip>
                 <Tooltip title="Insomnia" sx={{ cursor: 'pointer' }}>
