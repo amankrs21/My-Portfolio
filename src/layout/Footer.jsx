@@ -1,12 +1,8 @@
-import React from 'react';
 import { Box } from '@mui/material';
 import {
     Container, IconButton, Stack, Typography, Tooltip
 } from '@mui/material';
-import XIcon from '@mui/icons-material/X';
-import FacebookIcon from '@mui/icons-material/GitHub';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
+import { X as XIcon, GitHub, LinkedIn, Instagram } from '@mui/icons-material';
 
 
 // Latest Copyright component
@@ -62,7 +58,7 @@ export default function Footer() {
                             sx={{ alignSelf: 'center' }}
                             onClick={() => window.open('https://github.com/amankrs21', '_blank', 'noopener,noreferrer')}
                         >
-                            <FacebookIcon />
+                            <GitHub />
                         </IconButton>
                     </Tooltip>
                     <Tooltip arrow title="X.com">
@@ -82,7 +78,7 @@ export default function Footer() {
                             sx={{ alignSelf: 'center' }}
                             onClick={() => window.open('https://www.linkedin.com/in/amankrs21', '_blank', 'noopener,noreferrer')}
                         >
-                            <LinkedInIcon />
+                            <LinkedIn />
                         </IconButton>
                     </Tooltip>
                     <Tooltip arrow title="Instagram">
@@ -92,7 +88,7 @@ export default function Footer() {
                             sx={{ alignSelf: 'center' }}
                             onClick={() => window.open('https://www.instagram.com/amankrs21', '_blank', 'noopener,noreferrer')}
                         >
-                            <InstagramIcon />
+                            <Instagram />
                         </IconButton>
                     </Tooltip>
                 </Stack>
