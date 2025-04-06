@@ -17,14 +17,14 @@ import Contact from './pages/contact/Contact';
 // App component
 export default function App() {
 
-  const [isLoadding, setIsLoadding] = useState(true)
+  const [isLoading, setIsLoading] = useState(true)
   const [mode, setMode] = useState(localStorage.getItem('mode') ?? 'dark')
 
   const LPtheme = useMemo(() => createTheme(getLPTheme(mode)), [mode]);
 
   useEffect(() => {
     const timer = setTimeout(() => {
-      setIsLoadding(false);
+      setIsLoading(false);
     }, 2000);
     return () => clearTimeout(timer);
   }, []);
@@ -39,7 +39,7 @@ export default function App() {
     <ThemeProvider theme={LPtheme}>
       <CssBaseline />
 
-      {isLoadding ? (<Loading />) : (
+      {isLoading ? (<Loading />) : (
 
         <BrowserRouter>
 
