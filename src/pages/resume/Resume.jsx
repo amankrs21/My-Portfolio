@@ -5,8 +5,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
     import.meta.url,
 ).toString();
 
-import Grid from '@mui/material/Grid2';
-import { Container, Button } from '@mui/material';
+import { Grid, Container, Button } from '@mui/material';
 import SaveAltIcon from '@mui/icons-material/SaveAlt';
 
 import { useState, useEffect } from 'react';

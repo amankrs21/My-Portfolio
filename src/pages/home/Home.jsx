@@ -1,95 +1,86 @@
-import './Home.css';
-import React from 'react';
+import Lottie from "lottie-react";
+import { Container, Grid, Typography } from "@mui/material";
 
-import Grid from '@mui/material/Grid2';
-import { Container, Grid2, Typography } from '@mui/material';
-import Typewriter from "typewriter-effect";
+import HomeAnimation from "./Home.json";
+import TypewriterEffect from "../../components/TypewriterEffect";
 
-import Lottie from 'react-lottie';
-import WorkDev from './work.json';
 
-function Home() {
+// Home Component
+export default function Home() {
     window.scrollTo(0, 0);
 
-    const defaultOptions = {
-        loop: true,
-        autoplay: true,
-        animationData: WorkDev,
-        rendererSettings: {
-            preserveAspectRatio: "xMidYMid slice"
-        }
-    };
     return (
-        <Container maxWidth='lg' sx={{ py: 5, backgroundImage: 'home-bg.jpg' }} id="home">
-            <Grid2 container mt={3} mb={15}>
-                <Grid size={{ md: 7, pl: 2 }} className="home-autopart">
-                    <Typography variant="h3" sx={{ pb: 2 }} className="heading">
-                        Hi There!{' '}
+        <Container maxWidth="lg" sx={{ py: 5, backgroundImage: 'url(/home-bg.jpg)', backgroundSize: 'cover' }}>
+            <Grid container spacing={4} alignItems="center" mt={2} mb={13}>
+                <Grid size={{ xs: 12, md: 7 }} sx={{ pl: { md: 2 } }}>
+                    <Typography variant="h3" sx={{ pb: 2 }}>
+                        Hi There!{" "}
                         <span className="home-wave" role="img" aria-labelledby="wave">
                             👋🏻
                         </span>
                     </Typography>
 
-                    <Typography variant="h3">
+                    <Typography variant="h3" gutterBottom>
                         I'M
-                        <strong style={{ color: '#0a66c2' }}> AMAN SINGH</strong>
+                        <strong style={{ color: "#0a66c2" }}> AMAN SINGH</strong>
                     </Typography>
 
-                    <Typography variant="h4" gutterBottom color='primary' fontWeight={500} sx={{ mt: 6 }}>
-                        <Typewriter
-                            options={{
-                                strings: [
-                                    'DevOps Engineer @ TCS 🚀',
-                                    'Full-time Software Developer 💻',
-                                    'Genrative AI Enthusiast 🤖',
-                                ],
-                                autoStart: true,
-                                loop: true,
-                                deleteSpeed: 50,
-                            }}
+                    <Typography
+                        gutterBottom
+                        variant="h4"
+                        color="primary"
+                        fontWeight={500}
+                        sx={{ mt: 4, height: "30px" }}
+                    >
+                        <TypewriterEffect
+                            strings={[
+                                "DevOps Engineer @ TCS 🚀",
+                                "Generative AI Enthusiast 🤖",
+                                "Full-stack Developer 💻",
+                            ]}
+                            delay={50}
+                            deleteSpeed={20}
                         />
                     </Typography>
                 </Grid>
 
-                <Grid size={{ md: 5 }} className='home-lotties'>
+                <Grid size={{ xs: 12, md: 5 }} className="home-lotties">
                     <Lottie
-                        options={defaultOptions}
-                        height={400}
-                        width={400}
+                        animationData={HomeAnimation}
+                        loop
+                        autoplay
+                        style={{ height: 400, width: 400 }}
                     />
                 </Grid>
-            </Grid2>
+            </Grid>
 
-            <Grid2 container mt={5} spacing={3}>
-                <Grid size={{ md: 8 }}>
-                    <Typography variant="h3" textAlign='center'>
-                        LET ME <strong style={{ color: '#0a66c2' }}> INTRODUCE </strong> MYSELF
+            <Grid container spacing={4} mt={6}>
+                <Grid size={{ xs: 12, md: 8 }}>
+                    <Typography variant="h3" textAlign="center" gutterBottom>
+                        LET ME <strong style={{ color: "#0a66c2" }}> INTRODUCE </strong> MYSELF
                     </Typography>
-                    <Typography variant="h6" mt={4} p={3}>
-                        I totally got hooked on programming, and hey, I've picked up a
-                        thing or two, I guess... 🤷
+
+                    <Typography variant="h6" mt={3} px={2}>
+                        I’m a developer who loves crafting practical and scalable software. From streamlining DevOps pipelines to experimenting with AI, I enjoy solving real-world problems with clean, efficient code.
                         <br /><br />
-                        I excel in classics like
-                        <i><strong style={{ color: '#0a66c2' }}> Python 🐍, React ⚛️, and Dotnet 🖥️, </strong></i>
-                        always ready to innovate and simplify the digital world 🌎.
+                        I'm proficient in stacks like
+                        <strong style={{ color: "#0a66c2" }}> Python, MERN, MEAN, .NET</strong> and leverage platforms like <strong style={{ color: "#0a66c2" }}>AWS</strong> to deliver cloud-ready solutions. My interest in <strong style={{ color: "#0a66c2" }}>Generative AI</strong> pushes me to constantly innovate and learn.
                         <br /><br />
-                        My field of Interest's are building new &nbsp;
-                        <i><strong style={{ color: '#0a66c2' }}>Web Technologies </strong></i>
-                        and also in areas related to{" "}
-                        <i><strong style={{ color: '#0a66c2' }}>Genrative AI.</strong></i>
+                        I believe in lifelong learning — from exploring new frameworks to optimizing cloud systems, I'm always leveling up.
                         <br /><br />
-                        Whenever I got chance to learn something new, I never missed it. I
-                        love learning new things, and I am currently diving deeper into
-                        <strong style={{ color: '#0a66c2' }}> Angular</strong> and
-                        <strong style={{ color: '#0a66c2' }}> AWS Cloud Enginnering.</strong>
+                        Currently working at <strong style={{ color: "#0a66c2" }}>Tata Consultancy Services</strong>, I enjoy building things with an engineer’s mindset and a creator’s heart.
                     </Typography>
                 </Grid>
-                <Grid2 size={{ md: 4 }} className='home-avatar'>
-                    <img src="avatar.svg" alt="avatar" />
-                </Grid2>
-            </Grid2>
+
+                <Grid size={{ xs: 12, md: 4 }} className="home-avatar">
+                    <img src="avatar.svg" alt="avatar" style={{ width: "100%", maxWidth: 300 }} />
+                </Grid>
+            </Grid>
+
+            {/* <Typography variant="h6" align="center" mt={6} color="text.secondary">
+                Curious to see what I’ve built? Head over to the <strong style={{ color: "#0a66c2" }}>Projects</strong> section 🚀
+            </Typography> */}
+
         </Container>
     );
 }
-
-export default Home;

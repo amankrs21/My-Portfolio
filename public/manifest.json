@@ -1,0 +1,22 @@
+{
+    "name": "Aman's Portfolio",
+    "short_name": "Aman's",
+    "description": "Aman's personal portfolio showcasing projects, resume, and more.",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#ffffff",
+    "theme_color": "#0d47a1",
+    "orientation": "portrait-primary",
+    "icons": [
+        {
+            "src": "/icons/web-app-manifest-192x192.png",
+            "sizes": "192x192",
+            "type": "image/png"
+        },
+        {
+            "src": "/icons/web-app-manifest-512x512.png",
+            "sizes": "512x512",
+            "type": "image/png"
+        }
+    ]
+}
