@@ -4,7 +4,7 @@ Welcome to my personal portfolio! This responsive and interactive website is des
 
 ## 🔍 Preview
 
-🌐 Live Website: [Visit Here](https://your-portfolio-url.com)
+🌐 Live Website: [Visit Here](https://amankrs21.pages.dev)
 
 ---
 
@@ -12,7 +12,7 @@ Welcome to my personal portfolio! This responsive and interactive website is des
 
 | Light Mode | Dark Mode |
 |------------|-----------|
-| ![Light](./screenshots/light.png) | ![Dark](./screenshots/dark.png) |
+| ![Light](./screenshots/home-light.png) | ![Dark](./screenshots/home-dark.png) |
 
 ---
 
