@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import PropTypes from 'prop-types';
 import { Box } from '@mui/material';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -14,6 +14,8 @@ import {
 export default function Header({ mode, modeChange }) {
     const navigate = useNavigate();
     const location = useLocation();
+
+    const menuRef = useRef(null);
     const [open, setOpen] = useState(false);
 
     const toggleDrawer = (page) => {
@@ -22,6 +24,17 @@ export default function Header({ mode, modeChange }) {
             navigate('/' + page);
         }
     };
+
+    useEffect(() => {
+        const handleClickOutside = (event) => {
+            if (menuRef.current && !menuRef.current.contains(event.target)) {
+                setOpen(false);
+            }
+        };
+        if (open) { document.addEventListener('mousedown', handleClickOutside); }
+
+        return () => { document.removeEventListener('mousedown', handleClickOutside); };
+    }, [open]);
 
     const isActive = (page) => location.pathname === '/' + page;
 
@@ -132,6 +145,7 @@ export default function Header({ mode, modeChange }) {
                     </Toolbar>
                     <Collapse in={open}>
                         <Box
+                            ref={menuRef}
                             sx={{
                                 display: { xs: 'block', md: 'none' },
                                 bgcolor: mode === 'light' ? 'rgba(241, 241, 241, 0.9)' : 'rgba(0, 0, 0, 0.8)',
