@@ -39,6 +39,7 @@ export default function Footer() {
                         height: 'auto',
                         width: '150px',
                         mb: { xs: 0, md: 0 },
+                        pointerEvents: 'none',
                     }}
                     alt="logo of sitemark"
                 />
