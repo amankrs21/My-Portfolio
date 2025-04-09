@@ -13,7 +13,7 @@
         "img": "project/SecureVault.png",
         "link": "https://securevault.pages.dev/",
         "ghLink": "https://github.com/amankrs21/Secure-Vault",
-        "description": "A secure todo management platform built with the MERN stack. Features JWT-based authentication, encrypted data handling, and protected routes—ensuring only verified users can access personal data in a clean, user-friendly interface."
+        "description": "A secure vault for passwords and notes, built with the MERN stack. Features JWT-based auth, PIN-protected encryption, and E2E data safety—ensuring only you can access your private info in a sleek, secure, and user-first experience. 🔐🛡️"
     },
     {
         "id": 3,
@@ -33,11 +33,11 @@
     },
     {
         "id": 5,
-        "title": "React Experiments",
-        "img": "project/ReactExperiments.png",
-        "link": "https://reactexperiments.pages.dev/",
-        "ghLink": "https://github.com/amankrs21/reactexperiments",
-        "description": "A collection of mini React apps including password validator, calculator, BMI calculator, weather app, and todo manager. Each experiment highlights core React concepts like state, props, and form handling in interactive UI setups."
+        "title": "Reactify Hub",
+        "img": "project/ReactifyHub.png",
+        "link": "https://reactify-hub.pages.dev/",
+        "ghLink": "https://github.com/amankrs21/Reactify-Hub",
+        "description": "A collection of mini React apps built into Reactify Hub—featuring weather, password validation, calculator, BMI, and todos. Each tool showcases refined React concepts like state, props, and hooks in a clean, interactive, and responsive UI."
     },
     {
         "id": 6,
