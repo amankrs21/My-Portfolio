@@ -9,6 +9,30 @@
     },
     {
         "id": 2,
+        "title": "GenAI RAG BOT",
+        "img": "project/rag-bot.png",
+        "link": "https://ragbot.pages.dev/",
+        "ghLink": "https://github.com/amankrs21/GenAI-RAG-Bot",
+        "description": "Generative AI Assistant built with Retrieval-Augmented Generation (RAG) architecture using FastAPI, ChromaDB, LangChain, Mistral, Cohere Embeddings, Pickle, Session Management. This bot answers domain-specific queries using a vector store."
+    },
+    {
+        "id": 3,
+        "title": "FineTune-LLM",
+        "img": "project/fine-tune.png",
+        "link": null,
+        "ghLink": "https://github.com/amankrs21/FineTune-LLM",
+        "description": "FineTune-LLM is a Generative AI tool for fine-tuning large language models using custom datasets with Hugging Face Transformers, Datasets, PEFT, LoRA, and DeepSpeed. It simplifies training, evaluation, and deployment of tailored LLMs for domain-specific tasks."
+    },
+    {
+        "id": 4,
+        "title": "Article Analyzer-NLP",
+        "img": "project/nlp.png",
+        "link": null,
+        "ghLink": "https://github.com/amankrs21/ArticleAnalyzer-NLP",
+        "description": "A Python-based NLP project that scrapes articles from given URLs, analyzes their sentiment and readability metrics, and exports the results to an Excel file. It utilizes BeautifulSoup for web scraping, TextBlob for sentiment analysis, and Flesch-Kincaid for readability scoring."
+    },
+    {
+        "id": 5,
         "title": "Secure Vault",
         "img": "project/SecureVault.png",
         "link": "https://securevault.pages.dev/",
@@ -16,7 +40,7 @@
         "description": "A secure vault for passwords and notes, built with the MERN stack. Features JWT-based auth, PIN-protected encryption, and E2E data safety—ensuring only you can access your private info in a sleek, secure, and user-first experience. 🔐🛡️"
     },
     {
-        "id": 3,
+        "id": 6,
         "title": "Retro Sphere",
         "img": "project/RetroSphere.png",
         "link": "https://retro-sphere.pages.dev/",
@@ -24,15 +48,7 @@
         "description": "A real-time retro board for agile teams. It lets team members share feedback, emotions, and appreciation post-sprint. WebSocket-powered, interactive, and designed to foster engagement during sprint retrospectives in a fun, collaborative way."
     },
     {
-        "id": 4,
-        "title": "My Portfolio",
-        "img": "project/Portfolio.png",
-        "link": "https://amankrs21.pages.dev/",
-        "ghLink": "https://github.com/amankrs21/portfolio",
-        "description": "A personal portfolio website crafted with React and Tailwind CSS. Features smooth animations, responsive layout, and clean UI to showcase my skills, projects, and aspirations in a modern and accessible format."
-    },
-    {
-        "id": 5,
+        "id": 7,
         "title": "Reactify Hub",
         "img": "project/ReactifyHub.png",
         "link": "https://reactify-hub.pages.dev/",
@@ -40,15 +56,31 @@
         "description": "A collection of mini React apps built into Reactify Hub—featuring weather, password validation, calculator, BMI, and todos. Each tool showcases refined React concepts like state, props, and hooks in a clean, interactive, and responsive UI."
     },
     {
-        "id": 6,
-        "title": "MERN Todo",
+        "id": 8,
+        "title": "My Portfolio",
+        "img": "project/Portfolio.png",
+        "link": "https://amankrs21.pages.dev/",
+        "ghLink": "https://github.com/amankrs21/My-Portfolio",
+        "description": "A personal portfolio website crafted with React and Tailwind CSS. Features smooth animations, responsive layout, and clean UI to showcase my skills, projects, and aspirations in a modern and accessible format."
+    },
+    {
+        "id": 9,
+        "title": "My Portfolio OLD",
+        "img": "project/portfolio-old.png",
+        "link": "https://amankrs21-old.pages.dev/",
+        "ghLink": "https://github.com/amankrs21/My-Portfolio-OLD",
+        "description": "A personal portfolio website crafted with React and Tailwind CSS. Features smooth animations, responsive layout, and clean UI to showcase my skills, projects, and aspirations in a modern and accessible format."
+    },
+    {
+        "id": 10,
+        "title": "TODO MERN",
         "img": "project/TodoMern.png",
-        "link": "https://todomern.pages.dev",
+        "link": null,
         "ghLink": "https://github.com/amankrs21/TodoMern",
         "description": "A robust todo management app built using the MERN stack. Offers full CRUD, JWT authentication, and protected routes to ensure secure access and task management for authenticated users."
     },
     {
-        "id": 7,
+        "id": 11,
         "title": "Todo React Django",
         "img": "project/TodoReactDjango.png",
         "link": null,
@@ -56,7 +88,7 @@
         "description": "A todo app built with React and Django. It includes JWT authentication, Material UI components, and seamless user interactions—combining frontend dynamism with a stable backend architecture."
     },
     {
-        "id": 8,
+        "id": 12,
         "title": "Todo Angular Dotnet",
         "img": "project/TodoAngularNet.png",
         "link": null,
@@ -64,7 +96,7 @@
         "description": "Full-stack todo application using Angular and Dotnet C#. Includes JWT-based authentication and CRUD features. Offers a structured and secure platform for managing daily tasks with type-safe backend handling."
     },
     {
-        "id": 9,
+        "id": 13,
         "title": "Finance",
         "img": "project/Finance.png",
         "link": null,
@@ -72,7 +104,7 @@
         "description": "A finance portfolio website for a finance firm. Built with React and Django, it supports user authentication, blogs, contact forms, payment gateway integration, and interactive charts to showcase service data and financial metrics."
     },
     {
-        "id": 10,
+        "id": 14,
         "title": "Angular Todo",
         "img": "project/AngularTodo.png",
         "link": "https://angulartodo.pages.dev/",
