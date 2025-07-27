@@ -57,46 +57,14 @@
     },
     {
         "id": 8,
-        "title": "My Portfolio",
-        "img": "project/Portfolio.png",
-        "link": "https://amankrs21.pages.dev/",
-        "ghLink": "https://github.com/amankrs21/My-Portfolio",
-        "description": "A personal portfolio website crafted with React and Tailwind CSS. Features smooth animations, responsive layout, and clean UI to showcase my skills, projects, and aspirations in a modern and accessible format."
+        "title": "Whisper Share",
+        "img": "project/WhisperShare.png",
+        "link": "https://whisper-share.azurewebsites.net/",
+        "ghLink": "https://github.com/amankrs21/Whisper-Share",
+        "description": "A private file-sharing platform built as Whisper-Share—featuring QR pairing, WebSocket communication, and 50MB transfers. It demonstrates real-time sync and secure exchange using React, Express, and Material UI in a sleek UI."
     },
     {
         "id": 9,
-        "title": "My Portfolio OLD",
-        "img": "project/portfolio-old.png",
-        "link": "https://amankrs21-old.pages.dev/",
-        "ghLink": "https://github.com/amankrs21/My-Portfolio-OLD",
-        "description": "A personal portfolio website crafted with React and Tailwind CSS. Features smooth animations, responsive layout, and clean UI to showcase my skills, projects, and aspirations in a modern and accessible format."
-    },
-    {
-        "id": 10,
-        "title": "TODO MERN",
-        "img": "project/TodoMern.png",
-        "link": null,
-        "ghLink": "https://github.com/amankrs21/TodoMern",
-        "description": "A robust todo management app built using the MERN stack. Offers full CRUD, JWT authentication, and protected routes to ensure secure access and task management for authenticated users."
-    },
-    {
-        "id": 11,
-        "title": "Todo React Django",
-        "img": "project/TodoReactDjango.png",
-        "link": null,
-        "ghLink": "https://github.com/amankrs21/TodoReactDjango",
-        "description": "A todo app built with React and Django. It includes JWT authentication, Material UI components, and seamless user interactions—combining frontend dynamism with a stable backend architecture."
-    },
-    {
-        "id": 12,
-        "title": "Todo Angular Dotnet",
-        "img": "project/TodoAngularNet.png",
-        "link": null,
-        "ghLink": "https://github.com/amankrs21/TodoAngularNet",
-        "description": "Full-stack todo application using Angular and Dotnet C#. Includes JWT-based authentication and CRUD features. Offers a structured and secure platform for managing daily tasks with type-safe backend handling."
-    },
-    {
-        "id": 13,
         "title": "Finance",
         "img": "project/Finance.png",
         "link": null,
@@ -104,7 +72,47 @@
         "description": "A finance portfolio website for a finance firm. Built with React and Django, it supports user authentication, blogs, contact forms, payment gateway integration, and interactive charts to showcase service data and financial metrics."
     },
     {
+        "id": 10,
+        "title": "My Portfolio",
+        "img": "project/Portfolio.png",
+        "link": "https://amankrs21.pages.dev/",
+        "ghLink": "https://github.com/amankrs21/My-Portfolio",
+        "description": "A personal portfolio website crafted with React and Tailwind CSS. Features smooth animations, responsive layout, and clean UI to showcase my skills, projects, and aspirations in a modern and accessible format."
+    },
+    {
+        "id": 11,
+        "title": "My Portfolio OLD",
+        "img": "project/portfolio-old.png",
+        "link": "https://amankrs21-old.pages.dev/",
+        "ghLink": "https://github.com/amankrs21/My-Portfolio-OLD",
+        "description": "A personal portfolio website crafted with React and Tailwind CSS. Features smooth animations, responsive layout, and clean UI to showcase my skills, projects, and aspirations in a modern and accessible format."
+    },
+    {
+        "id": 12,
+        "title": "TODO MERN",
+        "img": "project/TodoMern.png",
+        "link": null,
+        "ghLink": "https://github.com/amankrs21/TodoMern",
+        "description": "A robust todo management app built using the MERN stack. Offers full CRUD, JWT authentication, and protected routes to ensure secure access and task management for authenticated users."
+    },
+    {
+        "id": 13,
+        "title": "Todo React Django",
+        "img": "project/TodoReactDjango.png",
+        "link": null,
+        "ghLink": "https://github.com/amankrs21/TodoReactDjango",
+        "description": "A todo app built with React and Django. It includes JWT authentication, Material UI components, and seamless user interactions—combining frontend dynamism with a stable backend architecture."
+    },
+    {
         "id": 14,
+        "title": "Todo Angular Dotnet",
+        "img": "project/TodoAngularNet.png",
+        "link": null,
+        "ghLink": "https://github.com/amankrs21/TodoAngularNet",
+        "description": "Full-stack todo application using Angular and Dotnet C#. Includes JWT-based authentication and CRUD features. Offers a structured and secure platform for managing daily tasks with type-safe backend handling."
+    },
+    {
+        "id": 15,
         "title": "Angular Todo",
         "img": "project/AngularTodo.png",
         "link": "https://angulartodo.pages.dev/",
